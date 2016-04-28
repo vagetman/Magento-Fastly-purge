@@ -24,5 +24,5 @@ hmacMessage=`echo -n $urlPath$unixTime | openssl sha1 -hmac $hmacKey`
 
 purgeToken=$unixTime"_"$hmacMessage
 
-curl -svX PURGE -H "X-Purge-Token: $purgeToken" $2
+curl -svX PURGE -H "X-Purge-Token: $purgeToken" $siteURL
 
